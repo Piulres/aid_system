@@ -126,3 +126,10 @@ table.dataTable thead .sorting_desc {
 .c-sidebar-brand .c-sidebar-brand-full:hover {
     color: inherit;
 }
+.logo {
+    width: 40px;
+    height: auto;
+}
+.searchbar {
+    padding-bottom: 20px;
+}

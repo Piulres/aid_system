@@ -18,7 +18,7 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y H:i:s',
-            'column_class'          => 'col-md-3',
+            'column_class'          => 'col-md-2',
             'entries_number'        => '5',
         ];
 
@@ -63,7 +63,7 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y',
-            'column_class'          => 'col-md-3',
+            'column_class'          => 'col-md-2',
             'entries_number'        => '5',
         ];
 
@@ -108,7 +108,7 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y H:i:s',
-            'column_class'          => 'col-md-3',
+            'column_class'          => 'col-md-2',
             'entries_number'        => '5',
         ];
 
@@ -153,7 +153,7 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y H:i:s',
-            'column_class'          => 'col-md-3',
+            'column_class'          => 'col-md-2',
             'entries_number'        => '5',
         ];
 
@@ -198,7 +198,7 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y',
-            'column_class'          => 'col-md-3',
+            'column_class'          => 'col-md-2',
             'entries_number'        => '5',
         ];
 
@@ -243,7 +243,7 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y H:i:s',
-            'column_class'          => 'col-md-3',
+            'column_class'          => 'col-md-2',
             'entries_number'        => '5',
         ];
 
@@ -278,35 +278,35 @@ class HomeController
                 ->{$settings6['aggregate_function'] ?? 'count'}($settings6['aggregate_field'] ?? '*');
         }
 
-        $settings7 = [
-            'chart_title'           => 'Last Alerts',
-            'chart_type'            => 'latest_entries',
-            'report_type'           => 'group_by_date',
-            'model'                 => 'App\\Models\\UserAlert',
-            'group_by_field'        => 'created_at',
-            'group_by_period'       => 'day',
-            'aggregate_function'    => 'count',
-            'filter_field'          => 'created_at',
-            'group_by_field_format' => 'd/m/Y H:i:s',
-            'column_class'          => 'col-md-3',
-            'entries_number'        => '5',
-            'fields'                => [
-                'alert_text' => '',
-                'alert_link' => '',
-            ],
-        ];
+        // $settings7 = [
+        //     'chart_title'           => 'Last Alerts',
+        //     'chart_type'            => 'latest_entries',
+        //     'report_type'           => 'group_by_date',
+        //     'model'                 => 'App\\Models\\UserAlert',
+        //     'group_by_field'        => 'created_at',
+        //     'group_by_period'       => 'day',
+        //     'aggregate_function'    => 'count',
+        //     'filter_field'          => 'created_at',
+        //     'group_by_field_format' => 'd/m/Y H:i:s',
+        //     'column_class'          => 'col-md-3',
+        //     'entries_number'        => '5',
+        //     'fields'                => [
+        //         'alert_text' => '',
+        //         'alert_link' => '',
+        //     ],
+        // ];
 
-        $settings7['data'] = [];
+        // $settings7['data'] = [];
 
-        if (class_exists($settings7['model'])) {
-            $settings7['data'] = $settings7['model']::latest()
-                ->take($settings7['entries_number'])
-                ->get();
-        }
+        // if (class_exists($settings7['model'])) {
+        //     $settings7['data'] = $settings7['model']::latest()
+        //         ->take($settings7['entries_number'])
+        //         ->get();
+        // }
 
-        if (!array_key_exists('fields', $settings7)) {
-            $settings7['fields'] = [];
-        }
+        // if (!array_key_exists('fields', $settings7)) {
+        //     $settings7['fields'] = [];
+        // }
 
         $settings8 = [
             'chart_title'           => 'Last Tasks',
@@ -478,6 +478,6 @@ class HomeController
 
         $chart14 = new LaravelChart($settings14);
 
-        return view('home', compact('settings1', 'settings2', 'settings3', 'settings4', 'settings5', 'settings6', 'settings7', 'settings8', 'settings9', 'settings10', 'settings11', 'chart12', 'chart13', 'chart14'));
+        return view('home', compact('settings1', 'settings2', 'settings3', 'settings4', 'settings5', 'settings6', 'settings8', 'settings9', 'settings10', 'settings11', 'chart12', 'chart13', 'chart14'));
     }
 }

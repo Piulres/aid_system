@@ -70,45 +70,7 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- Widget - latest entries --}}
-                        <div class="{{ $settings7['column_class'] }}" style="overflow-x: auto;">
-                            <h3>{{ $settings7['chart_title'] }}</h3>
-                            <table class="table table-bordered table-striped">
-                                <thead>
-                                    <tr>
-                                        @foreach($settings7['fields'] as $key => $value)
-                                            <th>
-                                                {{ ucfirst($key) }}
-                                            </th>
-                                        @endforeach
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @forelse($settings7['data'] as $entry)
-                                        <tr>
-                                            @foreach($settings7['fields'] as $key => $value)
-                                                <td>
-                                                    @if($value === '')
-                                                        {{ $entry->{$key} }}
-                                                    @elseif(is_iterable($entry->{$key}))
-                                                        @foreach($entry->{$key} as $subEentry)
-                                                            <span class="label label-info">{{ $subEentry->{$value} }}</span>
-                                                        @endforeach
-                                                    @else
-                                                        {{ $entry->{$key}->{$value} }}
-                                                    @endif
-                                                </td>
-                                            @endforeach
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="{{ count($settings7['fields']) }}">{{ __('No entries found') }}</td>
-                                        </tr>
-                                    @endforelse
-                                </tbody>
-                            </table>
-                        </div>
-
+                        
                         {{-- Widget - latest entries --}}
                         <div class="{{ $settings8['column_class'] }}" style="overflow-x: auto;">
                             <h3>{{ $settings8['chart_title'] }}</h3>
