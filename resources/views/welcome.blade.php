@@ -8,7 +8,7 @@
 		<meta name="keywords" content="Innovation,Planning,Web Development,Webdesign,Design System,User Interface,User Experience,Interaction Design" />
 		<meta name="author" content="AidCollective" />
 		<meta property="og:image" content="{{ asset('img/3.png') }}" />
-		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+		<link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
         <link href="{{ asset('css/base.css?v=1') }}" rel="stylesheet" />
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
