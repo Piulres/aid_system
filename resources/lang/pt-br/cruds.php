@@ -286,6 +286,7 @@ return [
     'contentPage'             => [
         'title'          => 'Páginas',
         'title_singular' => 'Página',
+        'last'           => 'Últimas Páginas',
         'fields'         => [
             'id'                    => 'ID',
             'id_helper'             => ' ',
@@ -354,6 +355,7 @@ return [
     'task'                    => [
         'title'          => 'Tarefas',
         'title_singular' => 'Tarefa',
+        'last'           => 'Últimas Tarefas',
         'fields'         => [
             'id'                 => 'ID',
             'id_helper'          => ' ',
@@ -492,6 +494,7 @@ return [
     'client'                  => [
         'title'          => 'Clientes',
         'title_singular' => 'Cliente',
+        'last'           => 'Últimos Clientes',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => ' ',
@@ -526,6 +529,7 @@ return [
     'project'                 => [
         'title'          => 'Projetos',
         'title_singular' => 'Projeto',
+        'last'           => 'Últimos Projetos',
         'fields'         => [
             'id'                 => 'ID',
             'id_helper'          => ' ',

@@ -33,13 +33,14 @@
                 <i class="fas fa-fw fa-bars"></i>
             </button>
 
-            <a class="c-header-brand d-lg-none" href="#">{{ trans('panel.site_title') }}</a>
+            <a class="c-header-brand d-lg-none" href="/"><img class="logo" src="{{ asset('img/logo.png') }}"/></a>
 
             <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
                 <i class="fas fa-fw fa-bars"></i>
             </button>
 
             <ul class="c-header-nav ml-auto">
+
                 @if(count(config('panel.available_languages', [])) > 1)
                     <li class="c-header-nav-item dropdown d-md-down-none">
                         <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -90,10 +91,16 @@
         <div class="c-body">
             <main class="c-main">
 
-
                 <div class="container-fluid">
+                    
+                    <div class="row mb-4">
+                        <div class="col-lg-12">
+                            <select class="searchable-field form-control"></select>
+                        </div>
+                    </div>
+
                     @if(session('message'))
-                        <div class="row mb-2">
+                        <div class="row mb-4">
                             <div class="col-lg-12">
                                 <div class="alert alert-success" role="alert">{{ session('message') }}</div>
                             </div>

@@ -9,7 +9,7 @@ class HomeController
     public function index()
     {
         $settings1 = [
-            'chart_title'           => 'Block Users',
+            'chart_title'           => trans('cruds.user.title'),
             'chart_type'            => 'number_block',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Models\\User',
@@ -18,7 +18,8 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y H:i:s',
-            'column_class'          => 'col-md-2',
+            'column_class'          => 'col-md-2 col-4',
+            'link'                  => '/admin/users/',
             'entries_number'        => '5',
         ];
 
@@ -54,7 +55,7 @@ class HomeController
         }
 
         $settings2 = [
-            'chart_title'           => 'Block Tasks',
+            'chart_title'           => trans('cruds.task.title'),
             'chart_type'            => 'number_block',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Models\\Task',
@@ -63,7 +64,8 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y',
-            'column_class'          => 'col-md-2',
+            'column_class'          => 'col-md-2 col-4',
+            'link'                  => '/admin/tasks/',
             'entries_number'        => '5',
         ];
 
@@ -99,7 +101,7 @@ class HomeController
         }
 
         $settings3 = [
-            'chart_title'           => 'Block Pages',
+            'chart_title'           => trans('cruds.contentPage.title'),
             'chart_type'            => 'number_block',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Models\\ContentPage',
@@ -108,7 +110,8 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y H:i:s',
-            'column_class'          => 'col-md-2',
+            'column_class'          => 'col-md-2 col-4',
+            'link'                  => '/admin/content-pages/',
             'entries_number'        => '5',
         ];
 
@@ -144,7 +147,7 @@ class HomeController
         }
 
         $settings4 = [
-            'chart_title'           => 'Block Clients',
+            'chart_title'           =>  trans('cruds.client.title'),
             'chart_type'            => 'number_block',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Models\\Client',
@@ -153,7 +156,8 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y H:i:s',
-            'column_class'          => 'col-md-2',
+            'column_class'          => 'col-md-2 col-4',
+            'link'                  => '/admin/clients/',
             'entries_number'        => '5',
         ];
 
@@ -189,7 +193,7 @@ class HomeController
         }
 
         $settings5 = [
-            'chart_title'           => 'Block Projects',
+            'chart_title'           =>  trans('cruds.project.title'),
             'chart_type'            => 'number_block',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Models\\Project',
@@ -198,7 +202,8 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y',
-            'column_class'          => 'col-md-2',
+            'column_class'          => 'col-md-2 col-4',
+            'link'                  => '/admin/projects/',
             'entries_number'        => '5',
         ];
 
@@ -234,7 +239,7 @@ class HomeController
         }
 
         $settings6 = [
-            'chart_title'           => 'Block Questions',
+            'chart_title'           => trans('cruds.faqQuestion.title'),
             'chart_type'            => 'number_block',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Models\\FaqQuestion',
@@ -243,7 +248,8 @@ class HomeController
             'aggregate_function'    => 'count',
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd/m/Y H:i:s',
-            'column_class'          => 'col-md-2',
+            'column_class'          => 'col-md-2 col-4',
+            'link'                  => '/admin/faq-questions/',
             'entries_number'        => '5',
         ];
 
@@ -309,7 +315,7 @@ class HomeController
         // }
 
         $settings8 = [
-            'chart_title'           => 'Last Tasks',
+            'chart_title'           => trans('cruds.task.last'),
             'chart_type'            => 'latest_entries',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Models\\Task',
@@ -340,7 +346,7 @@ class HomeController
         }
 
         $settings9 = [
-            'chart_title'           => 'Last Pages',
+            'chart_title'           => trans('cruds.contentPage.last'),
             'chart_type'            => 'latest_entries',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Models\\ContentPage',
@@ -371,7 +377,7 @@ class HomeController
         }
 
         $settings10 = [
-            'chart_title'           => 'Last Clients',
+            'chart_title'           => trans('cruds.client.last'),
             'chart_type'            => 'latest_entries',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Models\\Client',
@@ -386,7 +392,7 @@ class HomeController
                 'first_name' => '',
                 'last_name'  => '',
                 'company'    => '',
-                'status'     => 'name',
+                // 'status'     => 'name',
             ],
         ];
 
@@ -403,7 +409,7 @@ class HomeController
         }
 
         $settings11 = [
-            'chart_title'           => 'Last Projects',
+            'chart_title'           => trans('cruds.project.last'),
             'chart_type'            => 'latest_entries',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Models\\Project',

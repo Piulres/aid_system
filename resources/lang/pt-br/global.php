@@ -184,6 +184,7 @@ return [
     'no_reports_yet'                       => 'Nenhum relatório ainda.',
     'not_approved_p'                       => 'Sua conta não foi aprovada ainda pelo administrador, por favor, aguarde e tente mais tarde.',
     'not_approved_title'                   => 'A sua conta não está aprovada',
+    'not_found'                            => 'Não Encontrado',
     'note_text'                            => 'Texto da nota',
     'notifications'                        => 'Notificações',
     'notify_user'                          => 'Notificar usuário',

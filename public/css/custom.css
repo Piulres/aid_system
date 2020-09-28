@@ -44,8 +44,7 @@ table.dataTable thead th {
 }
 
 .select2 {
-    max-width: 100%;
-    width: 100% !important;
+    width: 100%;
 }
 
 .select2-selection__rendered {
@@ -132,4 +131,7 @@ table.dataTable thead .sorting_desc {
 }
 .searchbar {
     padding-bottom: 20px;
+}
+.bg-native {
+    background-color: #3c4b64;
 }
