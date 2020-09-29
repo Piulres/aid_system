@@ -22,7 +22,6 @@ class Document extends Model implements HasMedia
     ];
 
     public static $searchable = [
-        'document_file',
         'description',
     ];
 

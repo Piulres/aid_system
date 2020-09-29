@@ -22,8 +22,8 @@ return [
         ],
     ],
     'role'                    => [
-        'title'          => 'Regras',
-        'title_singular' => 'Regras',
+        'title'          => 'Papéis',
+        'title_singular' => 'Papel',
         'fields'         => [
             'id'                 => 'ID',
             'id_helper'          => ' ',
@@ -180,6 +180,7 @@ return [
     'expense'                 => [
         'title'          => 'Despesas',
         'title_singular' => 'Despesa',
+        'report'         => 'Despesa - Análise',
         'fields'         => [
             'id'                      => 'ID',
             'id_helper'               => ' ',
@@ -204,6 +205,7 @@ return [
     'income'                  => [
         'title'          => 'Rendas',
         'title_singular' => 'Renda',
+        'report'           => 'Renda - Análise',
         'fields'         => [
             'id'                     => 'ID',
             'id_helper'              => ' ',
@@ -495,6 +497,7 @@ return [
         'title'          => 'Clientes',
         'title_singular' => 'Cliente',
         'last'           => 'Últimos Clientes',
+        'report'           => 'Cliente - Análise',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => ' ',

@@ -4,9 +4,10 @@
     <div class="col-md-6">
         <div class="card mx-4">
             <div class="card-body p-4">
-                <h1>{{ trans('panel.site_title') }}</h1>
 
-                <p class="text-muted">{{ trans('global.reset_password') }}</p>
+                <img class="logo" src="{{ asset('img/logo.png') }}"/>
+
+                <h3 class="text-muted">{{ trans('global.reset_password') }}</h3>
 
                 <form method="POST" action="{{ route('password.request') }}">
                     @csrf

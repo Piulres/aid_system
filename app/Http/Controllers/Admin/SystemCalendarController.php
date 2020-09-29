@@ -14,7 +14,7 @@ class SystemCalendarController extends Controller
             'field'      => 'first_name',
             'prefix'     => 'Client',
             'suffix'     => 'joined',
-            'route'      => 'admin.clients.edit',
+            'route'      => 'admin.clients.show',
         ],
         [
             'model'      => '\\App\\Models\\User',
@@ -22,7 +22,7 @@ class SystemCalendarController extends Controller
             'field'      => 'name',
             'prefix'     => 'User',
             'suffix'     => 'joined',
-            'route'      => 'admin.users.edit',
+            'route'      => 'admin.users.show',
         ],
         [
             'model'      => '\\App\\Models\\ContentPage',
@@ -30,7 +30,7 @@ class SystemCalendarController extends Controller
             'field'      => 'title',
             'prefix'     => 'Page',
             'suffix'     => 'created',
-            'route'      => 'admin.content-pages.edit',
+            'route'      => 'admin.content-pages.show',
         ],
         [
             'model'      => '\\App\\Models\\Task',
@@ -38,7 +38,7 @@ class SystemCalendarController extends Controller
             'field'      => 'name',
             'prefix'     => 'Task',
             'suffix'     => 'created',
-            'route'      => 'admin.tasks.edit',
+            'route'      => 'admin.tasks.show',
         ],
         [
             'model'      => '\\App\\Models\\Project',
@@ -46,7 +46,7 @@ class SystemCalendarController extends Controller
             'field'      => 'name',
             'prefix'     => 'Project',
             'suffix'     => 'created',
-            'route'      => 'admin.projects.edit',
+            'route'      => 'admin.projects.show',
         ],
         [
             'model'      => '\\App\\Models\\Income',
@@ -54,7 +54,7 @@ class SystemCalendarController extends Controller
             'field'      => 'description',
             'prefix'     => 'Income',
             'suffix'     => 'entered',
-            'route'      => 'admin.incomes.edit',
+            'route'      => 'admin.incomes.show',
         ],
         [
             'model'      => '\\App\\Models\\Expense',
@@ -62,7 +62,7 @@ class SystemCalendarController extends Controller
             'field'      => 'description',
             'prefix'     => 'Expense',
             'suffix'     => 'entered',
-            'route'      => 'admin.expenses.edit',
+            'route'      => 'admin.expenses.show',
         ],
     ];
 

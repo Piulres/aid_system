@@ -14,6 +14,7 @@
 
     <div class="row">
         
+        {{-- Widget - block --}}
         <a href="{{ $settings1['link']}}" class="{{ $settings1['column_class'] }}">
             <div class="card text-white bg-native">
                 <div class="card-body pb-0">
@@ -78,7 +79,19 @@
         <div class="{{ $settings8['column_class'] }}" style="overflow-x: auto;">
             <h3>{{ $settings8['chart_title'] }}</h3>
             <table class="table table-bordered table-striped">
-                
+                <thead>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.task.fields.name') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.task.fields.status') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.task.fields.due_date') }}
+                        </th>
+                    </tr>
+                </thead>
                 <tbody>
                     @forelse($settings8['data'] as $entry)
                         <tr>
@@ -105,11 +118,22 @@
             </table>
         </div>
 
-        {{-- Widget - latest entries --}}
         <div class="{{ $settings9['column_class'] }}" style="overflow-x: auto;">
             <h3>{{ $settings9['chart_title'] }}</h3>
             <table class="table table-bordered table-striped">
-                
+                <thead>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.contentPage.fields.title') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.contentPage.fields.category') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.contentPage.fields.tag') }}
+                        </th>
+                    </tr>
+                </thead>
                 <tbody>
                     @forelse($settings9['data'] as $entry)
                         <tr>
@@ -136,11 +160,22 @@
             </table>
         </div>
 
-        {{-- Widget - latest entries --}}
         <div class="{{ $settings10['column_class'] }}" style="overflow-x: auto;">
             <h3>{{ $settings10['chart_title'] }}</h3>
             <table class="table table-bordered table-striped">
-               
+                <thead>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.client.fields.first_name') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.client.fields.last_name') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.client.fields.company') }}
+                        </th>
+                    </tr>
+                </thead>
                 <tbody>
                     @forelse($settings10['data'] as $entry)
                         <tr>
@@ -167,11 +202,22 @@
             </table>
         </div>
 
-        {{-- Widget - latest entries --}}
         <div class="{{ $settings11['column_class'] }}" style="overflow-x: auto;">
             <h3>{{ $settings11['chart_title'] }}</h3>
             <table class="table table-bordered table-striped">
-               
+                <thead>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.project.fields.name') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.project.fields.client') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.project.fields.status') }}
+                        </th>
+                    </tr>
+                </thead>
                 <tbody>
                     @forelse($settings11['data'] as $entry)
                         <tr>
@@ -198,18 +244,22 @@
             </table>
         </div>
 
-        <div class="{{ $chart12->options['column_class'] }}">
-            <h3>{!! $chart12->options['chart_title'] !!}</h3>
-            {!! $chart12->renderHtml() !!}
-        </div>
-        <div class="{{ $chart13->options['column_class'] }}">
-            <h3>{!! $chart13->options['chart_title'] !!}</h3>
-            {!! $chart13->renderHtml() !!}
-        </div>
-        <div class="{{ $chart14->options['column_class'] }}">
-            <h3>{!! $chart14->options['chart_title'] !!}</h3>
-            {!! $chart14->renderHtml() !!}
-        </div>
+        {{-- Widget - analyze --}}
+        @can('user_management_access')
+            <div class="{{ $chart12->options['column_class'] }}">
+                <h3>{!! $chart12->options['chart_title'] !!}</h3>
+                {!! $chart12->renderHtml() !!}
+            </div>
+            <div class="{{ $chart13->options['column_class'] }}">
+                <h3>{!! $chart13->options['chart_title'] !!}</h3>
+                {!! $chart13->renderHtml() !!}
+            </div>
+            <div class="{{ $chart14->options['column_class'] }}">
+                <h3>{!! $chart14->options['chart_title'] !!}</h3>
+                {!! $chart14->renderHtml() !!}
+            </div>
+        @endcan
+
     </div>
         
 </div>

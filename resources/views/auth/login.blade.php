@@ -4,9 +4,9 @@
     <div class="col-md-6">
         <div class="card mx-4">
             <div class="card-body p-4">
-                <h1>{{ trans('panel.site_title') }}</h1>
+                <img class="logo" src="{{ asset('img/logo.png') }}"/>
 
-                <p class="text-muted">{{ trans('global.login') }}</p>
+                <h3 class="text-muted">{{ trans('global.login') }}</h3>
 
                 @if(session('message'))
                     <div class="alert alert-info" role="alert">

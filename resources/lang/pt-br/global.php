@@ -25,7 +25,7 @@ return [
     'month'                                => 'Mês',
     'no'                                   => 'Não',
     'pleaseSelect'                         => 'Selecione por favor',
-    'register'                             => 'Registar',
+    'register'                             => 'Registrar',
     'remember_me'                          => 'Lembrar',
     'reset_password'                       => 'Redefinir senha',
     'send_password'                        => 'Enviar Link para Redefinir Senha',

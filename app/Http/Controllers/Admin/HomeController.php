@@ -392,7 +392,6 @@ class HomeController
                 'first_name' => '',
                 'last_name'  => '',
                 'company'    => '',
-                // 'status'     => 'name',
             ],
         ];
 
@@ -440,7 +439,7 @@ class HomeController
         }
 
         $settings12 = [
-            'chart_title'        => 'Client - Status - Analyze',
+            'chart_title'        => trans('cruds.client.report'),
             'chart_type'         => 'bar',
             'report_type'        => 'group_by_relationship',
             'model'              => 'App\\Models\\Client',
@@ -455,7 +454,7 @@ class HomeController
         $chart12 = new LaravelChart($settings12);
 
         $settings13 = [
-            'chart_title'        => 'Income - Status - Analyze',
+            'chart_title'        => trans('cruds.income.report'),
             'chart_type'         => 'bar',
             'report_type'        => 'group_by_string',
             'model'              => 'App\\Models\\Income',
@@ -470,7 +469,7 @@ class HomeController
         $chart13 = new LaravelChart($settings13);
 
         $settings14 = [
-            'chart_title'        => 'Expense - Status - Analyze',
+            'chart_title'        => trans('cruds.expense.report'),
             'chart_type'         => 'bar',
             'report_type'        => 'group_by_string',
             'model'              => 'App\\Models\\Expense',
