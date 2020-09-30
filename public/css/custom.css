@@ -7,6 +7,7 @@ h1, h2, h3, h4, h5, p, a, ul, li, span, label, input, table, textarea, select, b
 .content table th,
 .content table td {
     border: none!important;
+    padding: 7px 10px;
 }
 .ck-editor__editable,
 textarea {
@@ -160,12 +161,34 @@ table.dataTable thead .sorting_desc {
     text-decoration: none;
 }
 .btn-primary {
-    color: #fff;
-    background-color: #3c4b64;
-    border-color: #3c4b64;
+    color: #fff!important;
+    background-color: #3c4b64!important;
+    border-color: #3c4b64!important;
 }
-.btn-link {
-    color: #3c4b64;
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: #c8552b!important;
+    color: #ffffff!important;
+    border-color: #c8552b!important;
+    box-shadow: 0 0 0 0.2rem rgb(224 107 65 / 50%)!important;
+}
+.btn-warning {
+    color: #ffffff;
+}
+.btn-link,
+.page-link {
+    color: #3c4b64!important;
+}
+.btn-link:hover,
+.page-link:hover {
+    color: #2c3544!important;
+    background-color: transparent!important;
+}
+.btn-primary.disabled {
+    background-color: #c7c7c7;
+    border-color: #c7c7c7;
+    color: #000000;
 }
 .form-control:focus {
     color: #768192;
@@ -176,4 +199,25 @@ table.dataTable thead .sorting_desc {
 }
 .c-sidebar-nav-dropdown-items > li a {
     background-color: #2c3544!important;
+}
+div.dataTables_wrapper div.dataTables_length select {
+    min-width: 60px;
+    line-height: 1.8;
+    margin-right: 5px;
+}
+div.dataTables_wrapper div.dataTables_length label {
+    padding: 5px 0;
+}
+.dataTables_length {
+    margin-right: 5px;
+}
+table td .btn-xs,
+table td form {
+    width: 100%;
+}
+.dt-button-collection a {
+    border-color: black;
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
 }

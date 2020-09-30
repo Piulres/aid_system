@@ -81,15 +81,11 @@
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>
-                            {{ trans('cruds.task.fields.name') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.task.fields.status') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.task.fields.due_date') }}
-                        </th>
+                        @foreach($settings8['fields'] as $key => $value)
+                            <th>
+                            {{ trans('cruds.task.fields.' . $key) }}
+                            </th>
+                        @endforeach
                     </tr>
                 </thead>
                 <tbody>
@@ -123,15 +119,11 @@
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>
-                            {{ trans('cruds.contentPage.fields.title') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.contentPage.fields.category') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.contentPage.fields.tag') }}
-                        </th>
+                        @foreach($settings9['fields'] as $key => $value)
+                            <th>
+                            {{ trans('cruds.contentPage.fields.' . $key) }}
+                            </th>
+                        @endforeach
                     </tr>
                 </thead>
                 <tbody>
@@ -165,15 +157,11 @@
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>
-                            {{ trans('cruds.client.fields.first_name') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.client.fields.last_name') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.client.fields.company') }}
-                        </th>
+                        @foreach($settings10['fields'] as $key => $value)
+                            <th>
+                            {{ trans('cruds.client.fields.' . $key) }}
+                            </th>
+                        @endforeach
                     </tr>
                 </thead>
                 <tbody>
@@ -207,15 +195,11 @@
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>
-                            {{ trans('cruds.project.fields.name') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.project.fields.client') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.project.fields.status') }}
-                        </th>
+                        @foreach($settings11['fields'] as $key => $value)
+                            <th>
+                            {{ trans('cruds.project.fields.' . $key) }}
+                            </th>
+                        @endforeach
                     </tr>
                 </thead>
                 <tbody>

@@ -22,9 +22,7 @@
         <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-Client">
             <thead>
                 <tr>
-                    <th width="10">
-
-                    </th>
+                    <th width="10"></th>
                     <th>
                         {{ trans('cruds.client.fields.id') }}
                     </th>
@@ -56,7 +54,6 @@
                         {{ trans('cruds.client.fields.status') }}
                     </th>
                     <th>
-                        &nbsp;
                     </th>
                 </tr>
                 <tr>
