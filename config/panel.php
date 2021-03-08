@@ -7,9 +7,9 @@ return [
     'available_languages'       => [
         'pt-br'   => 'Brazilian Portuguese',
         'en'      => 'English',
-        'ru'      => 'Russian',
+        // 'ru'      => 'Russian',
         'es'      => 'Spanish',
-        'zh-Hans' => 'Chinese',
+        // 'zh-Hans' => 'Chinese',
     ],
     'registration_default_role' => '2',
 ];

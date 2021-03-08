@@ -23,8 +23,6 @@ class ContentPage extends Model implements HasMedia
 
     public static $searchable = [
         'title',
-        'page_text',
-        'excerpt',
     ];
 
     protected $dates = [
